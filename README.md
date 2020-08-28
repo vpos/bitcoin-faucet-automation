@@ -1,3 +1,3 @@
 # bitcoin-faucet-automation
 
-A deadend to bitcion faucet app automatization. Captcha really does work! :)
+A deadend to bitcion faucet app automatization utilizing Selenium. Captcha really does work! :)
