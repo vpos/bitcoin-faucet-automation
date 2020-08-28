@@ -21,6 +21,9 @@ driver = webdriver.Chrome('./chromedrivers/chromedriverForWin.exe')
 url = 'http://bonusbitcoin.co/faucet'
 driver.get(url)
 
+email = ''
+password = ''
+
 # driver.maximize_window()
 
 try:
@@ -31,11 +34,11 @@ try:
     time.sleep(1)
     setEmail = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#SignInEmailInput')))
     setEmail.clear()
-    setEmail.send_keys('pospisil1vaclav@gmail.com')
+    setEmail.send_keys(email)
 
     time.sleep(1)
     setPassw = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '#SignInPasswordInput')))
-    setPassw.send_keys('childbycrystalcastle1+')
+    setPassw.send_keys(password)
 
     time.sleep(1)
     reCaptcha = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.recaptcha-checkbox-border')))
